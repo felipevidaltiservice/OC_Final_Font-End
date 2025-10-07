@@ -1,0 +1,454 @@
+/* ==========================================================================
+   Estilos Gerais e Reset
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 200px; /* Espaço para o menu fixo */
+}
+
+h2 {
+    color: #004A8D;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.blue-text {
+    color: #004A8D;
+}
+
+/* ==========================================================================
+   Cabeçalho e Navegação (Header)
+   ========================================================================== */
+header.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background-color: #004A8D; 
+    /*background-image: url('img/imagem1.jpg'); */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-left img {
+    height: 90px;
+}
+
+.header-text {
+    flex: 1;
+    text-align: center;
+}
+
+.header-text h1 {
+    color: #F7941D;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-text p {
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   Navegação Desktop (VERSÃO FINAL E ROBUSTA) 
+   ========================================================================== */
+.navbar-nav {
+    display: flex;
+    flex-direction: row; /* Itens alinhados horizontalmente */
+    align-items: center;  /* Alinha os itens verticalmente */
+    gap: 1.5rem; /* Espaçamento entre os itens */
+    list-style: none; /* Remove os pontos de lista */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Impede quebra de linha nos itens */
+}
+
+.navbar-nav a:hover {
+    color: #004A8D;
+}
+
+/* ==========================================================================
+   Menu Dropdown (Hamburguer) para Mobile
+   ========================================================================== */
+.navbar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: none;
+}
+
+.dropbtn {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropbtn:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-icon {
+    width: 18px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-icon span {
+    display: block;
+    height: 2px;
+    background: black;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   Seções Gerais e Cards
+   ========================================================================== */
+section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.imagem1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.imagem1 img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000033;
+}
+
+.services, .differentials, .clients, .mission-vision-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #F7941D;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #F7941D;
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: #004A8D;
+    margin-bottom: 1rem;
+}
+
+.clients .card img {
+    max-width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   Galeria de Imagens
+   ========================================================================== */
+
+.carousel {
+  max-width: 800px; 
+  margin: 0 auto; 
+  border-radius: 8px; 
+  overflow: hidden; 
+}
+
+.carousel-item img {
+    height: 450px; 
+    object-fit: cover; 
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: #0f0f0f; /* Uma cor roxa, por exemplo */
+    font-size: 2.5rem; /* Um pouco maior para destacar */
+}
+
+
+
+
+/* ==========================================================================
+   Seção de Contato
+   ========================================================================== */
+.contact-section {
+    background: #ffffff;
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #00000014;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.contact-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #00000014;
+}
+
+.info-side ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-side li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.info-side a {
+    color: #004A8D;
+    text-decoration: none;
+}
+
+.info-side a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: #960000;
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #004A8D;
+}
+
+/* ==========================================================================
+   Botton top
+   ========================================================================== 
+
+button {
+  display: inline-block;
+  background-color: #ff9800;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 12px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;  
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #333;  
+}
+
+button:active{
+  background-color: #555;
+}
+
+button.show {
+  opacity: 1;
+  visibility: visible;
+} */
+
+/* ==========================================================================
+   Rodapé (Footer)
+   ========================================================================== */
+footer {
+    background-color: #004A8D;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsividade (Media Queries)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+    }
+    .dropdown {
+        display: block;
+    }
+    .imagem1 img {
+        max-width: 80%;
+    }
+    .mission-vision-values {
+        grid-template-columns: 1fr;
+    }
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-box {
+        width: 100%;
+    }
+    .contact-box h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    header.navbar h1 {
+        font-size: 2rem;
+    }
+    .card i {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
