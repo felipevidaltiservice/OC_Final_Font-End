@@ -346,6 +346,11 @@ section {
 .contact-form button:hover {
     background-color: #004A8D;
 }
+.clients{
+   border-radius: 50%;
+   margin-right: 10px;
+   width: 10%;
+}
 
 /* ==========================================================================
    Botton top
@@ -447,6 +452,7 @@ footer a:hover {
         font-size: 2rem;
     }
 }
+
 
 
 
