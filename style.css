@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Estilos Gerais e Reset
+   RESET E CONFIGURAÇÕES GERAIS
    ========================================================================== */
 * {
     box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
     background-color: #f5f7fa;
     color: #333;
     line-height: 1.6;
-    padding-top: 200px; /* Espaço para o menu fixo */
+    padding-top: 200px; 
 }
 
 h2 {
@@ -34,8 +34,10 @@ li {
     color: #004A8D;
 }
 
+
+
 /* ==========================================================================
-   Cabeçalho e Navegação (Header)
+   HEADER GLOBAL (USADO EM TODAS AS PÁGINAS)
    ========================================================================== */
 header.navbar {
     display: flex;
@@ -49,8 +51,7 @@ header.navbar {
     z-index: 1000;
     padding: 1rem 2rem;
     background-color: #004A8D; 
-    /*background-image: url('img/imagem1.jpg'); */
-    background-size: cover; 
+    background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -71,22 +72,85 @@ header.navbar {
     margin: 0;
 }
 
-.header-text p {
-    color: #ffffff;
-    font-size: 1rem;
+/* ==========================================================================
+   Area restrita (login)
+   ========================================================================== */
+
+    body.login-page {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
 }
 
+.login-container, .home-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    
+}
+
+h1, h2 {
+    color: #004A8D;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+/*button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}*/
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    height: 20px; /* Evita que a tela "pule" quando a mensagem aparece */
+}
 
 /* ==========================================================================
-   Navegação Desktop (VERSÃO FINAL E ROBUSTA) 
+   NAVEGAÇÃO GLOBAL (INDEX, CONTATO, SERVIÇO)
    ========================================================================== */
 .navbar-nav {
     display: flex;
-    flex-direction: row; /* Itens alinhados horizontalmente */
-    align-items: center;  /* Alinha os itens verticalmente */
-    gap: 1.5rem; /* Espaçamento entre os itens */
-    list-style: none; /* Remove os pontos de lista */
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -97,15 +161,17 @@ header.navbar {
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
-    white-space: nowrap; /* Impede quebra de linha nos itens */
+    white-space: nowrap;
 }
 
 .navbar-nav a:hover {
     color: #004A8D;
 }
 
+
+
 /* ==========================================================================
-   Menu Dropdown (Hamburguer) para Mobile
+   MENU DROPDOWN (USADO NA INDEX - MOBILE)
    ========================================================================== */
 .navbar-right {
     margin-left: auto;
@@ -176,8 +242,10 @@ header.navbar {
     border-radius: 2px;
 }
 
+
+
 /* ==========================================================================
-   Seções Gerais e Cards
+   INDEX.HTML → Seção de Serviços e Cursos
    ========================================================================== */
 section {
     padding: 4rem 1rem;
@@ -185,22 +253,7 @@ section {
     margin: auto;
 }
 
-.imagem1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    max-width: 100%;
-}
-
-.imagem1 img {
-    max-width: 40%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #00000033;
-}
-
-.services, .differentials, .clients, .mission-vision-values {
+.services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -226,16 +279,11 @@ section {
     margin-bottom: 1rem;
 }
 
-.clients .card img {
-    max-width: 150px;
-    max-height: 80px;
-    object-fit: contain;
-}
+
 
 /* ==========================================================================
-   Galeria de Imagens
+   INDEX.HTML → Carrossel (Imagens Principais)
    ========================================================================== */
-
 .carousel {
   max-width: 800px; 
   margin: 0 auto; 
@@ -250,15 +298,14 @@ section {
 
 .carousel-control-prev i,
 .carousel-control-next i {
-    color: #0f0f0f; /* Uma cor roxa, por exemplo */
-    font-size: 2.5rem; /* Um pouco maior para destacar */
+    color: #0f0f0f;
+    font-size: 2.5rem;
 }
 
 
 
-
 /* ==========================================================================
-   Seção de Contato
+   CONTATO.HTML → Seção Fale Conosco
    ========================================================================== */
 .contact-section {
     background: #ffffff;
@@ -312,11 +359,6 @@ section {
     gap: 1rem;
 }
 
-.contact-form h3 {
-    color: #333;
-    margin-bottom: 1rem;
-}
-
 .contact-form label {
     font-weight: 600;
     color: #333;
@@ -347,72 +389,62 @@ section {
     background-color: #004A8D;
 }
 
+
+
+/* ==========================================================================
+   SERVICO.HTML → Participantes e Descrição
+   ========================================================================== */
 .principais-participantes {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 50px; /* Espaçamento entre as imagens */
+    gap: 50px;
     margin-top: 20px;
 }
+
 .felipe, .carlos {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.avatar1 {
+
+.avatar1, .avatar2 {
     border-radius: 50%;
     width: 20%;
 }
-.avatar2 {
-    border-radius: 50%;
-    width: 20%;
-}
-/* ==========================================================================
-   Botton top
-   ========================================================================== 
-
-button {
-  display: inline-block;
-  background-color: #ff9800;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  border-radius: 12px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: background-color .3s, opacity .5s, visibility .5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-}
-
-button::after {
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: #fff;  
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: #333;  
-}
-
-button:active{
-  background-color: #555;
-}
-
-button.show {
-  opacity: 1;
-  visibility: visible;
-} */
 
 /* ==========================================================================
-   Rodapé (Footer)
+   Video  
+   ========================================================================== */
+
+.video {
+    display: flex;            /* usa flexbox */
+    justify-content: center;  /* centraliza horizontalmente */
+    align-items: center;      /* centraliza verticalmente se precisar */
+    margin: 20px 0;           /* espaço acima e abaixo do vídeo */
+}
+
+.video iframe {
+    width: 640px;  /* tamanho máximo do vídeo */
+    height: 360px;     /* altura fixa para telas grandes */
+}
+
+/* ==========================================================================
+   BOTÃO "VOLTAR AO TOPO" (INDEX)
+   ========================================================================== */
+
+ .seta { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    width: 50px; 
+    height: 50px; 
+    cursor: pointer; 
+    z-index: 1000; 
+    transition: opacity 0.3s ease; }
+
+/* ==========================================================================
+   RODAPÉ GLOBAL (TODAS AS PÁGINAS)
    ========================================================================== */
 footer {
     background-color: #004A8D;
@@ -431,45 +463,21 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   Responsividade (Media Queries)
-   ========================================================================== */
 
+
+/* ==========================================================================
+   RESPONSIVIDADE (TODAS AS PÁGINAS)
+   ========================================================================== */
 @media (max-width: 768px) {
-    .navbar-nav {
-        display: none;
-    }
-    .dropdown {
-        display: block;
-    }
-    .imagem1 img {
-        max-width: 80%;
-    }
-    .mission-vision-values {
-        grid-template-columns: 1fr;
-    }
-    .contact-content {
-        flex-direction: column;
-    }
-    .contact-box {
-        width: 100%;
-    }
-    .contact-box h2 {
-        text-align: center;
-    }
+    .navbar-nav { display: none; }
+    .dropdown { display: block; }
+    .imagem1 img { max-width: 80%; }
+    .contact-content { flex-direction: column; }
+    .contact-box { width: 100%; }
+    .contact-box h2 { text-align: center; }
 }
 
 @media (max-width: 600px) {
-    header.navbar h1 {
-        font-size: 2rem;
-    }
-    .card i {
-        font-size: 2rem;
-    }
+    header.navbar h1 { font-size: 2rem; }
+    .card i { font-size: 2rem; }
 }
-
-
-
-
-
-
