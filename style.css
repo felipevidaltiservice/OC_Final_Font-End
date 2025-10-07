@@ -346,12 +346,27 @@ section {
 .contact-form button:hover {
     background-color: #004A8D;
 }
-.clients{
-   border-radius: 50%;
-   margin-right: 10px;
-   width: 10%;
-}
 
+.principais-participantes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px; /* Espaçamento entre as imagens */
+    margin-top: 20px;
+}
+.felipe, .carlos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.avatar1 {
+    border-radius: 50%;
+    width: 20%;
+}
+.avatar2 {
+    border-radius: 50%;
+    width: 20%;
+}
 /* ==========================================================================
    Botton top
    ========================================================================== 
