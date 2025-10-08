@@ -91,7 +91,7 @@ header.navbar {
     flex-direction: column;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 5px #0000001a;
     text-align: center;
     width: 350px;
     height: 300px;
@@ -184,7 +184,7 @@ button:hover {
 }
 
 .navbar-nav a:hover {
-    color: #4d048a;
+    color: #F7941D;
 }
 
 
@@ -204,7 +204,7 @@ button:hover {
 }
 
 .dropbtn {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 25px;
     padding: 8px 16px;
@@ -226,7 +226,7 @@ button:hover {
     top: 45px;
     background-color: white;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px #00000033;
     border-radius: 8px;
     z-index: 1;
 }
@@ -257,7 +257,7 @@ button:hover {
 .menu-icon span {
     display: block;
     height: 2px;
-    background: black;
+    background: #000000;
     border-radius: 2px;
 }
 
@@ -410,7 +410,7 @@ section {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease;2
 }
 
 .contact-form button:hover {
@@ -454,7 +454,7 @@ section {
 
 .video iframe {
     width: 640px;  /* tamanho máximo do vídeo */
-    height: 360px;     /* altura fixa para telas grandes */
+    height: 360px;     /* altura fixa para telas grandes */7
 }
 
 /* ==========================================================================
@@ -469,7 +469,8 @@ section {
     height: 50px; 
     cursor: pointer; 
     z-index: 1000; 
-    transition: opacity 0.3s ease; }
+    transition: opacity 0.3s ease; 
+}
 
 /* ==========================================================================
    RODAPÉ GLOBAL (TODAS AS PÁGINAS)
